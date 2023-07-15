@@ -52,7 +52,35 @@ bool ifpalindrome(Node *&head)
 
     return true;
 }
+Node* middleNode1(Node* &head){
+    Node*fast=head,*slow=head;
+    while (fast!=NULL)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    return slow;
+}
+Node *reverse(Node *&head)
+{
+    if ((head == NULL) || (head->next = NULL))
+    {
+        return head;
+    }
+    Node *prev = NULL;
+    Node *curr = head;
+    Node *Next = NULL;
+    while (curr != NULL)
+    {
+        Next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = Next;
+    }
+    return prev;
+}
 bool ifpalindromeoptimised(Node *&head){
+    Node *temp=middleNode1(head);
     
 }
 int main()
