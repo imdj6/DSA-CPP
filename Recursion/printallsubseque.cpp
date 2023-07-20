@@ -6,13 +6,13 @@ void solve(int i, string s, string &f)
     {
         cout << f << " ";
         return;
-    } 
+    }
     // picking
     f = f + s[i];
     solve(i + 1, s, f);
     // poping out while backtracking
     f.pop_back();
-    //not take
+    // not take
     solve(i + 1, s, f);
 }
 int main()

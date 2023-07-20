@@ -23,7 +23,8 @@ bool isvalid(string str)
                 {
                     st.pop();
                 }
-                else{
+                else
+                {
                     return false;
                 }
             }
